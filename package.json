@@ -19,7 +19,7 @@
     "turbo": "latest"
   },
   "engines": {
-    "node": "^16",
+    "node": "16.13.2",
     "npm": "^8"
   },
   "dependencies": {},
