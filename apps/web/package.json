@@ -1,0 +1,32 @@
+{
+  "name": "web",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "ts-node --project tsconfig.server.json ./server/index.ts",
+    "build:server": "tsc --project tsconfig.server.json",
+    "build:next": "NODE_OPTIONS=--optimize_for_size NODE_OPTIONS=--max_old_space_size=4096 next build",
+    "build": "npm run build:next && npm run build:server",
+    "start": "NODE_ENV=production node ./dist/server/index.js",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "next": "12.2.3",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "ts-node": "^10.9.1",
+    "ui": "*"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@types/express": "^4.17.13",
+    "@types/node": "^18.7.14",
+    "@types/react": "17.0.48",
+    "eslint": "7.32.0",
+    "eslint-config-custom": "*",
+    "next-transpile-modules": "9.0.0",
+    "tsconfig": "*",
+    "typescript": "^4.5.3"
+  }
+}
